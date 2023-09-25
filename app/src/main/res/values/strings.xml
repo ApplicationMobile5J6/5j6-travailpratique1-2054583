@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AliTebbalTP1</string>
+    <string name="app_name">Ali Tebbal - TP1</string>
+    <string name="tv_nomResto">Chez carlo</string>
+    <string name="tv_reserverTable">Reserver votre table</string>
+    <string name="tv_tableRester">15 places restants</string>
+    <string name="btn_reserver">RÉSERVER UNE TABLE</string>
+    <string name="btn_afficherRes">AFFICHER LES RESERVATIONS</string>
 </resources>
