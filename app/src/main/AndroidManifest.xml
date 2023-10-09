@@ -13,6 +13,12 @@
         android:theme="@style/Theme.AppCompat.DayNight"
         tools:targetApi="31">
         <activity
+            android:name=".reservation"
+            android:exported="false" />
+        <activity
+            android:name=".restaurant"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
