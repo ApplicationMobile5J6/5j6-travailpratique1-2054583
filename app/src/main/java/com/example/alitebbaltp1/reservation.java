@@ -1,10 +1,13 @@
 package com.example.alitebbaltp1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class reservation extends AppCompatActivity {
+public class reservation implements Parcelable {
 
     int noReservation;
     String dateReservation;
@@ -13,6 +16,42 @@ public class reservation extends AppCompatActivity {
     String blocReservationFin;
     String nomPersonne;
     String telPersonne;
+
+
+    protected reservation(Parcel in) {
+        noReservation = in.readInt();
+        dateReservation = in.readString();
+        nbPlace = in.readInt();
+        blocReservationDebut = in.readString();
+        blocReservationFin = in.readString();
+        nomPersonne = in.readString();
+        telPersonne = in.readString();
+    }
+
+    public static final Creator<reservation> CREATOR = new Creator<reservation>() {
+        @Override
+        public reservation createFromParcel(Parcel in) {
+            return new reservation(in);
+        }
+
+        @Override
+        public reservation[] newArray(int size) {
+            return new reservation[size];
+        }
+    };
+
+    @Override
+    public String toString() {
+        return "reservation{" +
+                "noReservation=" + noReservation +
+                ", dateReservation='" + dateReservation + '\'' +
+                ", nbPlace=" + nbPlace +
+                ", blocReservationDebut='" + blocReservationDebut + '\'' +
+                ", blocReservationFin='" + blocReservationFin + '\'' +
+                ", nomPersonne='" + nomPersonne + '\'' +
+                ", telPersonne='" + telPersonne + '\'' +
+                '}';
+    }
 
     public int getNoReservation() {
         return noReservation;
@@ -80,11 +119,21 @@ public class reservation extends AppCompatActivity {
         this.telPersonne = telPersonne;
     }
 
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reservation);
+    public int describeContents() {
+        return 0;
     }
 
-
+    @Override
+    public void writeToParcel(@NonNull Parcel parcel, int i) {
+        parcel.writeInt(noReservation);
+        parcel.writeString(dateReservation);
+        parcel.writeInt(nbPlace);
+        parcel.writeString(blocReservationDebut);
+        parcel.writeString(blocReservationFin);
+        parcel.writeString(nomPersonne);
+        parcel.writeString(telPersonne);
+    }
 }

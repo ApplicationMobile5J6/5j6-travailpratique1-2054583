@@ -17,17 +17,10 @@
         android:layout_marginTop="80dp"
         app:srcCompat="@drawable/resto" />
 
-    <TextView
-        android:id="@+id/tv_nomResto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="15dp"
-        android:gravity="center_horizontal"
-        android:text="@string/tv_nomResto"
-        android:textColor="@color/gold"
-        android:textSize="34sp"
-        android:textStyle="bold|italic" />
+    <Spinner
+        android:id="@+id/spn_restos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/tv_reserverTable"
@@ -40,7 +33,7 @@
         android:textStyle="bold|italic" />
 
     <TextView
-        android:id="@+id/tv_tableRester"
+        android:id="@+id/tv_placesRestantes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
@@ -67,6 +60,7 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:onClick="OnClick"
         android:text="AFFICHER LES RESERVATION"
         android:textColor="@color/white"
         android:textSize="16sp"

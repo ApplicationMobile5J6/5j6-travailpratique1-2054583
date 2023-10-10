@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_imageListe"
+        android:layout_width="117dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="276dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src = "@drawable/table"
+        tools:srcCompat="@drawable/table" />
+
+    <TextView
+        android:id="@+id/tv_nomListe"
+        android:layout_width="157dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_imageListe"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_placeListe"
+        android:layout_width="75dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_imageListe"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nomListe" />
+
+    <TextView
+        android:id="@+id/tv_dateListe"
+        android:layout_width="104dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_placeListe"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nomListe" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".reservation">
 
+    <EditText
+        android:id="@+id/et_heureDepart"
+        android:layout_width="113dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/sp_heureDebut"
+        app:layout_constraintTop_toBottomOf="@+id/pb_placeReserve" />
+
+    <Button
+        android:id="@+id/btn_reserverDeux"
+        android:layout_width="273dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
+        android:text="RESERVER TABLE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Phone" />
+
     <TextView
         android:id="@+id/tv_titre"
         android:layout_width="313dp"
@@ -25,11 +47,63 @@
         tools:layout_editor_absoluteY="148dp" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/et_date"
         android:layout_width="387dp"
         android:layout_height="44dp"
         android:ems="10"
         android:inputType="date"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="199dp" />
+
+    <SeekBar
+        android:id="@+id/pb_placeReserve"
+        android:layout_width="311dp"
+        android:layout_height="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="308dp" />
+
+    <TextView
+        android:id="@+id/tv_progression"
+        android:layout_width="89dp"
+        android:layout_height="25dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="258dp" />
+
+    <Spinner
+        android:id="@+id/sp_heureDebut"
+        android:layout_width="116dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pb_placeReserve"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="38dp" />
+
+    <EditText
+        android:id="@+id/et_nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="108dp"
+        android:ems="10"
+        android:hint="Nom "
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pb_placeReserve" />
+
+    <EditText
+        android:id="@+id/et_Phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="numéro de teléphone"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nom" />
 </androidx.constraintlayout.widget.ConstraintLayout>
