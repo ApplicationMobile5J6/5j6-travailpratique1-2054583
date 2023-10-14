@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".restaurant">
+    tools:context=".ActiviteAffichage">
 
     <TextView
         android:id="@+id/tv_titreAffichage"
@@ -12,6 +12,7 @@
         android:layout_height="65dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="112dp"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,27 +22,29 @@
         android:layout_width="176dp"
         android:layout_height="17dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="216dp"
+        android:layout_marginEnd="152dp"
         android:text="Sélectionner une date"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titreAffichage" />
 
     <Spinner
         android:id="@+id/sp_dateList"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_width="277dp"
+        android:layout_height="31dp"
         android:layout_marginTop="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titreAffichage"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="1dp" />
+        tools:layout_editor_absoluteX="27dp" />
 
     <ListView
         android:id="@+id/lv_reservation"
-        android:layout_width="374dp"
-        android:layout_height="455dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="397dp"
+        android:layout_height="399dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/greyClair"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sp_dateList">
 

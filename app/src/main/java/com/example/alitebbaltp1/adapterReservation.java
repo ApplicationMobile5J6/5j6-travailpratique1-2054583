@@ -1,6 +1,7 @@
 package com.example.alitebbaltp1;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -44,6 +45,16 @@ public class adapterReservation extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup parent) {
+        view = LayoutInflater.from(dContexte).inflate(R.layout.list_view_row, parent, false);
+        tv_nom = view.findViewById(R.id.tv_nomListe);
+        tv_nom.setText(listReservation.get(i).getNomPersonne());
+
+        tv_place = view.findViewById(R.id.tv_placeListe);
+        tv_place.setText(listReservation.get(i).getNbPlace() + " places ");
+
+        tv_date = view.findViewById(R.id.tv_dateListe);
+        tv_date.setText(listReservation.get(i).getBlocReservationDebut());
+
         return view;
     }
 }

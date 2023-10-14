@@ -12,7 +12,7 @@
         android:layout_width="113dp"
         android:layout_height="41dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
         android:layout_marginTop="32dp"
         android:text="RESERVER TABLE"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_Phone" />
 
@@ -41,7 +41,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="68dp" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:id="@+id/tv_placesRestante"
@@ -58,66 +58,66 @@
         android:id="@+id/et_date"
         android:layout_width="339dp"
         android:layout_height="50dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="date"
-        app:layout_constraintTop_toBottomOf="@+id/tv_placesRestante"
-        tools:layout_editor_absoluteX="26dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_placesRestante" />
 
     <SeekBar
         android:id="@+id/pb_placeReserve"
         android:layout_width="311dp"
         android:layout_height="26dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_progression" />
+        app:layout_constraintTop_toBottomOf="@+id/et_date" />
 
     <TextView
         android:id="@+id/tv_progression"
         android:layout_width="148dp"
         android:layout_height="30dp"
-        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintHorizontal_bias="0.965"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_date" />
+        tools:layout_editor_absoluteY="-14dp" />
 
     <Spinner
         android:id="@+id/sp_heureDebut"
         android:layout_width="116dp"
         android:layout_height="28dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="136dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pb_placeReserve"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/pb_placeReserve" />
 
     <EditText
         android:id="@+id/et_nom"
         android:layout_width="334dp"
         android:layout_height="45dp"
-        android:layout_marginTop="108dp"
         android:ems="10"
         android:hint="Nom de la personne"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reserverDeux"
+        app:layout_constraintEnd_toStartOf="@+id/et_Phone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pb_placeReserve" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916" />
 
     <EditText
         android:id="@+id/et_Phone"
         android:layout_width="328dp"
         android:layout_height="39dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="256dp"
         android:ems="10"
         android:hint="numéro de teléphone"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintHorizontal_bias="0.96"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nom" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_progression" />
 </androidx.constraintlayout.widget.ConstraintLayout>
